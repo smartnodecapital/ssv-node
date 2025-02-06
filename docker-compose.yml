@@ -1,0 +1,17 @@
+services:
+  ssv:
+    image: ssvlabs/ssv-node:latest
+    ports:
+      - 13000:13000
+      - 12000:12000/udp
+      - 15000:15000
+    command:
+      make BUILD_PATH="/go/bin/ssvnode" start-node
+    volumes:
+      - ./config.yaml:/config/config.yaml
+      - ./data:/data
+      - ./password:/password
+      - ./encrypted_private_key.json:/encrypted_private_key.json
+    environment:
+      - CONFIG_PATH=/config/config.yaml
+    restart: unless-stopped
