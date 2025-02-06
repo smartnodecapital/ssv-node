@@ -11,12 +11,17 @@ change ssvnode3 in directory name of ssv node you want to run
 ```
 
 * change ports ending with required number
+* ! important that ports and enviroment port are same for udp/tcp
 * change container_name: ssv_node3
 ```docker-compose.override.yml
     ports:
-      - 13003:13000
-      - 12003:12000/udp
+      - 13003:13003/tcp
+      - 12003:12003/udp
       - 15003:15000
+    environment:
+      - TCP_PORT=13003
+      - UDP_PORT=12003
+
     container_name: ssv_node3
 ```
 
