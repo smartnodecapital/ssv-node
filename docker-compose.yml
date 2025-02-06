@@ -1,10 +1,6 @@
 services:
   ssv:
     image: ssvlabs/ssv-node:latest
-    ports:
-      - 13000:13000
-      - 12000:12000/udp
-      - 15000:15000
     command:
       make BUILD_PATH="/go/bin/ssvnode" start-node
     volumes:
