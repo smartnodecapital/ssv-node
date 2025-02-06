@@ -34,13 +34,13 @@ eth1:
 #  ETH1Addr: ws://mainnet-eth1-ws.infra.internal # e.g. ws://example.url:8546/ws
   ETH1Addr: ws://execution:8546 #local
 
-p2p:
+#p2p:
   # Optionally provide the external IP address of the node, if it cannot be automatically determined.
   # HostAddress: 192.168.1.1
 
   # Optionally override the default TCP & UDP ports of the node.
-  TcpPort: 13001
-  UdpPort: 12001
+#  TcpPort: 13001
+#  UdpPort: 12001
 
 KeyStore:
   PrivateKeyFile: ./encrypted_private_key.json # e.g. ./encrypted_private_key.json

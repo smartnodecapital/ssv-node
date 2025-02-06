@@ -1,9 +1,13 @@
 services:
   ssv:
     ports:
-      - 13003:13001/tcp
-      - 12003:12001/udp
+      - 13003:13003/tcp
+      - 12003:12003/udp
       - 15003:15000
+    environment:
+      - TCP_PORT=13003
+      - UDP_PORT=12003
+
     container_name: ssv_node3
     networks:
       - eth
