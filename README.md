@@ -4,8 +4,9 @@ Based on eth-nodes el/cl dockers running on same machine
 ## How to use
 
 ###
+change ssvnode3 in directory name of ssv node you want to run
 ```bash
-  sudo git clone https://github.com/smartnodecapital/eth-nodes.git ????
+  sudo git clone https://github.com/smartnodecapital/ssv-node.git ssvnode3
   sudo cp docker-compose.override.example.yml docker-compose.override.yml
 ```
 
