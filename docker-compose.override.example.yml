@@ -1,8 +1,8 @@
 services:
   ssv:
     ports:
-      - 13003:13000
-      - 12003:12000/udp
+      - 13003:13001/tcp
+      - 12003:12001/udp
       - 15003:15000
     container_name: ssv_node3
     networks:
